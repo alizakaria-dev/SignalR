@@ -121,19 +121,6 @@ export class ReservationHubService {
       console.error(error);
     }
   }
-
-  GetAllSeatsNormal(): Observable<Seat[]> {
-    return this.http.get<Seat[]>(
-      'http://localhost:5298/api/FoodItems/GetAllReservations'
-    );
-  }
-
-  UpdateReseravtionNormal(seat: Seat): Observable<void> {
-    return this.http.post<void>(
-      'http://localhost:5298/api/FoodItems/UpdateReservation',
-      seat
-    );
-  }
 }
 
 export class Seat {
