@@ -1,0 +1,20 @@
+<button (click)="HandleReservationClosing()">Close Reservations</button>
+
+<p>{{ message }}</p>
+<p>Number of free tables {{ freeSeats }}</p>
+
+@for(seat of seats; track seat.seatId){
+<ul>
+  <li (click)="Reservation(seat.seatId, seat.personId, seat.isReserved)">
+    Table : {{ seat.seatId }}
+    <i
+      ><span
+        class="fa-solid fa-chair"
+        [style.color]="seat.isReserved ? 'red' : '#63e6be'"
+      ></span
+    ></i>
+  </li>
+</ul>
+}
+
+<router-outlet></router-outlet>
