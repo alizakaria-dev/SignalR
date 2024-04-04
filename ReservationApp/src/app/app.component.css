@@ -1,0 +1,19 @@
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.seats-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+li {
+  flex-basis: 25%; /* Each item takes up 25% of the container width */
+  padding: 10px;
+  box-sizing: border-box;
+}
